@@ -1,0 +1,35 @@
+### Health check (application responds at root API server)
+GET http://localhost:8080/api/books
+
+### Create a book
+POST http://localhost:8080/api/books
+Content-Type: application/json
+
+{
+  "title": "Clean Code",
+  "author": "Robert C. Martin",
+  "isbn": "9780132350884",
+  "genre": "Software Engineering",
+  "publishedYear": 2008
+}
+
+### List all books
+GET http://localhost:8080/api/books
+
+### Get one book (replace 1 with returned ID)
+GET http://localhost:8080/api/books/1
+
+### Update a book
+PUT http://localhost:8080/api/books/1
+Content-Type: application/json
+
+{
+  "title": "Clean Code - Updated",
+  "author": "Robert C. Martin",
+  "isbn": "9780132350884",
+  "genre": "Programming",
+  "publishedYear": 2008
+}
+
+### Delete a book
+DELETE http://localhost:8080/api/books/1
